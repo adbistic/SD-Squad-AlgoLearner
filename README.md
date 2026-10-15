@@ -53,4 +53,6 @@ Each member adds their own row to this table.
 | Member | GitHub | Role |
 |---|---|---|
 | Toumani Adib | [@adbistic](https://github.com/adbistic) | Figma design · App structure & navigation · Final presentation |
-| Feryel | [@Feryel021](https://github.com/Feryel021) | PowerPoint · Hard level & sorting visualizer |
+| Alhamad Solaiman | [@solaimanalhamad20-dev](https://github.com/solaimanalhamad20-dev) | Learning material · Easy level & quiz engine |
+| Youssef Jelassi | [@youcefjlassi](https://github.com/youcefjlassi) | Quiz questions · Intermediate level & progress saving |
+| Feryel Jebali | [@Feryel021](https://github.com/Feryel021) | PowerPoint · Hard level & sorting visualizer |
