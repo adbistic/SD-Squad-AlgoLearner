@@ -53,3 +53,4 @@ Each member adds their own row to this table.
 | Member | GitHub | Role |
 |---|---|---|
 | Toumani Adib | [@adbistic](https://github.com/adbistic) | Figma design · App structure & navigation · Final presentation |
+| Feryel | [@Feryel021](https://github.com/Feryel021) | PowerPoint · Hard level & sorting visualizer |
