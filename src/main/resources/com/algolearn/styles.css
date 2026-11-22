@@ -1,0 +1,999 @@
+/*
+ * AlgoLearn visual style: the same design system as our Figma file.
+ * Dark theme, bordeaux as the main colour, one colour per level.
+ * The colours below are "looked-up colours": every screen uses these names,
+ * so changing one value here changes it in the whole app.
+ */
+
+.root {
+    /* Brand */
+    -bordeaux: #C23A62;
+    -bordeaux-dark: #8E2445;
+    -bordeaux-tint: #3A1E29;
+    -bordeaux-soft: #5A2C3C;
+    -accent-text: #F48AAA;
+
+    /* Surfaces */
+    -bg: #120E10;
+    -card: #1D1719;
+    -raised: #2A2225;
+    -code-bg: #0B0809;
+    -border: #322A2D;
+
+    /* Text */
+    -text: #F5EDF0;
+    -muted: #A3959B;
+    -subtle: #C7B9BF;
+    -disabled: #6E6266;
+    -disabled-bg: #2A2326;
+
+    /* Levels */
+    -easy: #4CC38A;
+    -easy-tint: #17322A;
+    -intermediate: #E3A63F;
+    -intermediate-tint: #382B16;
+    -hard: #A08CF0;
+    -hard-tint: #262140;
+
+    /* Feedback */
+    -correct: #4CC38A;
+    -correct-tint: #17322A;
+    -wrong: #F0646C;
+    -wrong-tint: #3D1C21;
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 15px;
+    -fx-background-color: -bg;
+    -fx-text-fill: -text;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* ---------- Text ---------- */
+
+.label {
+    -fx-text-fill: -text;
+}
+
+.title {
+    -fx-font-size: 34px;
+    -fx-font-weight: 800;
+}
+
+.h1 {
+    -fx-font-size: 30px;
+    -fx-font-weight: 800;
+}
+
+.h2 {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.h3 {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+.body {
+    -fx-font-size: 15px;
+    -fx-text-fill: -subtle;
+    -fx-line-spacing: 4px;
+}
+
+.muted {
+    -fx-text-fill: -muted;
+}
+
+.small {
+    -fx-font-size: 13px;
+}
+
+.strong {
+    -fx-font-weight: bold;
+}
+
+.accent {
+    -fx-text-fill: -accent-text;
+}
+
+.text-correct {
+    -fx-text-fill: -correct;
+}
+
+.text-wrong {
+    -fx-text-fill: -wrong;
+}
+
+/* ---------- Top bar ---------- */
+
+.top-bar {
+    -fx-background-color: -card;
+    -fx-border-color: transparent transparent -border transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0 40 0 40;
+    -fx-min-height: 72px;
+    -fx-pref-height: 72px;
+}
+
+.logo-mark {
+    -fx-background-color: -bordeaux;
+    -fx-background-radius: 10px;
+    -fx-min-width: 34px;
+    -fx-min-height: 34px;
+    -fx-alignment: center;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: 800;
+}
+
+.logo-text {
+    -fx-text-fill: -bordeaux;
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+}
+
+.crumb-title {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+.crumb-sub {
+    -fx-font-size: 13px;
+    -fx-text-fill: -muted;
+}
+
+.avatar {
+    -fx-background-color: -bordeaux-soft;
+    -fx-background-radius: 999px;
+    -fx-min-width: 36px;
+    -fx-min-height: 36px;
+    -fx-max-width: 36px;
+    -fx-max-height: 36px;
+    -fx-padding: 0;
+    -fx-alignment: center;
+    -fx-text-fill: -accent-text;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.avatar:hover {
+    -fx-background-color: -bordeaux-dark;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+    -fx-background-radius: 10px;
+    -fx-padding: 0 22 0 22;
+    -fx-min-height: 44px;
+    -fx-pref-height: 44px;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-graphic-text-gap: 8px;
+    -fx-alignment: center;
+}
+
+.btn-primary {
+    -fx-background-color: -bordeaux;
+    -fx-text-fill: white;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #D24A72;
+}
+
+.btn-primary:pressed {
+    -fx-background-color: -bordeaux-dark;
+}
+
+.btn-secondary {
+    -fx-background-color: -bordeaux-tint;
+    -fx-text-fill: -accent-text;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: -bordeaux-soft;
+}
+
+.btn-white {
+    -fx-background-color: white;
+    -fx-text-fill: -bordeaux-dark;
+}
+
+.btn-white:hover {
+    -fx-background-color: #F6E3EA;
+}
+
+.btn-small {
+    -fx-min-height: 36px;
+    -fx-pref-height: 36px;
+    -fx-padding: 0 14 0 14;
+    -fx-font-size: 14px;
+}
+
+.btn:disabled {
+    -fx-background-color: -disabled-bg;
+    -fx-text-fill: -disabled;
+    -fx-opacity: 1;
+}
+
+.btn .icon {
+    -fx-fill: white;
+}
+
+.btn-secondary .icon {
+    -fx-fill: -accent-text;
+}
+
+.btn-white .icon {
+    -fx-fill: -bordeaux-dark;
+}
+
+/* ---------- Badges and chips ---------- */
+
+.badge {
+    -fx-background-radius: 999px;
+    -fx-padding: 4 12 4 12;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.chip {
+    -fx-background-radius: 999px;
+    -fx-padding: 3 10 3 10;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tone-neutral {
+    -fx-background-color: -raised;
+    -fx-text-fill: -subtle;
+}
+
+.tone-primary {
+    -fx-background-color: -bordeaux-tint;
+    -fx-text-fill: -accent-text;
+}
+
+.tone-success {
+    -fx-background-color: -correct-tint;
+    -fx-text-fill: -correct;
+}
+
+.tone-wrong {
+    -fx-background-color: -wrong-tint;
+    -fx-text-fill: -wrong;
+}
+
+.tone-level-easy {
+    -fx-background-color: -easy-tint;
+    -fx-text-fill: -easy;
+}
+
+.tone-level-intermediate {
+    -fx-background-color: -intermediate-tint;
+    -fx-text-fill: -intermediate;
+}
+
+.tone-level-hard {
+    -fx-background-color: -hard-tint;
+    -fx-text-fill: -hard;
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+    -fx-background-color: -card;
+    -fx-background-radius: 14px;
+    -fx-border-color: -border;
+    -fx-border-radius: 14px;
+    -fx-border-width: 1;
+    -fx-padding: 24;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 20, 0, 0, 6);
+}
+
+.card-highlight {
+    -fx-border-color: -bordeaux-soft;
+    -fx-border-width: 1.5;
+}
+
+.divider {
+    -fx-background-color: -border;
+    -fx-min-height: 1px;
+    -fx-max-height: 1px;
+}
+
+/* ---------- Page and scrolling ---------- */
+
+.page-scroll,
+.page-scroll > .viewport {
+    -fx-background-color: -bg;
+    -fx-background: -bg;
+    -fx-padding: 0;
+}
+
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: -raised;
+    -fx-background-radius: 999px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: -bordeaux-soft;
+}
+
+.scroll-bar .track,
+.scroll-bar .track-background {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0;
+}
+
+/* ---------- Progress bar ---------- */
+
+.progress-track {
+    -fx-background-color: -border;
+    -fx-background-radius: 999px;
+    -fx-min-height: 10px;
+    -fx-pref-height: 10px;
+    -fx-max-height: 10px;
+}
+
+.progress-fill {
+    -fx-background-color: -bordeaux;
+    -fx-background-radius: 999px;
+}
+
+/* ---------- Home: level cards ---------- */
+
+.level-card {
+    -fx-border-width: 4 1 1 1;
+    -fx-border-radius: 14px;
+}
+
+.level-card.level-easy {
+    -fx-border-color: -easy -border -border -border;
+}
+
+.level-card.level-intermediate {
+    -fx-border-color: -intermediate -border -border -border;
+}
+
+.level-card.level-hard {
+    -fx-border-color: -hard -border -border -border;
+}
+
+.level-card.locked .h2,
+.level-card.locked .lesson-bullet-text {
+    -fx-text-fill: -muted;
+}
+
+.level-card.locked .num-tile,
+.level-card.locked .badge,
+.level-card.locked .bullet {
+    -fx-opacity: 0.55;
+}
+
+.num-tile {
+    -fx-background-radius: 10px;
+    -fx-alignment: center;
+    -fx-font-size: 22px;
+    -fx-font-weight: 800;
+}
+
+.bullet {
+    -fx-min-width: 7px;
+    -fx-min-height: 7px;
+    -fx-max-width: 7px;
+    -fx-max-height: 7px;
+    -fx-background-radius: 999px;
+}
+
+.bullet.level-easy {
+    -fx-background-color: -easy;
+}
+
+.bullet.level-intermediate {
+    -fx-background-color: -intermediate;
+}
+
+.bullet.level-hard {
+    -fx-background-color: -hard;
+}
+
+/* ---------- Level page: lesson rows ---------- */
+
+.lesson-row {
+    -fx-padding: 18 24 18 24;
+}
+
+.lesson-num {
+    -fx-min-width: 44px;
+    -fx-min-height: 44px;
+    -fx-max-width: 44px;
+    -fx-max-height: 44px;
+    -fx-background-color: -bordeaux-tint;
+    -fx-background-radius: 999px;
+    -fx-alignment: center;
+    -fx-text-fill: -bordeaux;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+.lesson-num.current,
+.lesson-num.done {
+    -fx-background-color: -bordeaux;
+    -fx-text-fill: white;
+}
+
+.lesson-num .icon {
+    -fx-fill: white;
+}
+
+.stat-row {
+    -fx-padding: 10 0 10 0;
+    -fx-border-color: transparent transparent -border transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+/* ---------- Lesson page ---------- */
+
+.step-num {
+    -fx-min-width: 24px;
+    -fx-min-height: 24px;
+    -fx-max-width: 24px;
+    -fx-max-height: 24px;
+    -fx-background-color: -bordeaux-tint;
+    -fx-background-radius: 999px;
+    -fx-alignment: center;
+    -fx-text-fill: -bordeaux;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.note {
+    -fx-background-color: -raised;
+    -fx-background-radius: 12px;
+    -fx-padding: 14 16 14 16;
+}
+
+.note-label {
+    -fx-text-fill: -accent-text;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.note-real-life {
+    -fx-background-color: -bordeaux-tint;
+}
+
+.banner {
+    -fx-background-color: -bordeaux-tint;
+    -fx-background-radius: 14px;
+    -fx-border-color: transparent transparent transparent -bordeaux;
+    -fx-border-width: 0 0 0 4;
+    -fx-border-radius: 14px;
+    -fx-padding: 18 24 18 24;
+}
+
+.banner .h3 {
+    -fx-text-fill: -text;
+}
+
+.banner-text {
+    -fx-text-fill: -subtle;
+    -fx-font-size: 13px;
+}
+
+/* ---------- Home: "Up next" strip ---------- */
+
+.up-next {
+    -fx-background-color: -card;
+    -fx-background-radius: 14px;
+    -fx-border-color: -border;
+    -fx-border-width: 1 1 1 5;
+    -fx-border-radius: 14px;
+    -fx-padding: 16 22 16 20;
+}
+
+.up-next.level-easy {
+    -fx-border-color: -border -border -border -easy;
+}
+
+.up-next.level-intermediate {
+    -fx-border-color: -border -border -border -intermediate;
+}
+
+.up-next.level-hard {
+    -fx-border-color: -border -border -border -hard;
+}
+
+.up-next-kicker {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -accent-text;
+}
+
+.lesson-tick.level-easy {
+    -fx-fill: -easy;
+}
+
+.lesson-tick.level-intermediate {
+    -fx-fill: -intermediate;
+}
+
+.lesson-tick.level-hard {
+    -fx-fill: -hard;
+}
+
+/* ---------- Quiz: one segment per question ---------- */
+
+.quiz-seg {
+    -fx-background-color: -border;
+    -fx-background-radius: 999px;
+    -fx-min-height: 8px;
+    -fx-pref-height: 8px;
+    -fx-max-height: 8px;
+}
+
+.quiz-seg.current {
+    -fx-background-color: -bordeaux;
+}
+
+.quiz-seg.right {
+    -fx-background-color: -correct;
+}
+
+.quiz-seg.wrong {
+    -fx-background-color: -wrong;
+}
+
+/* ---------- Results: score ring ---------- */
+
+.ring-track {
+    -fx-fill: transparent;
+    -fx-stroke: -border;
+    -fx-stroke-width: 11px;
+}
+
+.ring-fill {
+    -fx-fill: transparent;
+    -fx-stroke-width: 11px;
+    -fx-stroke-line-cap: round;
+}
+
+.ring-fill.correct {
+    -fx-stroke: -correct;
+}
+
+.ring-fill.wrong {
+    -fx-stroke: -wrong;
+}
+
+.ring-score {
+    -fx-font-size: 38px;
+    -fx-font-weight: 800;
+}
+
+.code-box {
+    -fx-background-color: -code-bg;
+    -fx-background-radius: 12px;
+    -fx-padding: 18 20 18 20;
+}
+
+.code-text {
+    -fx-font-family: "Consolas";
+    -fx-font-size: 12.5px;
+    -fx-fill: #F3E9ED;
+}
+
+.code-keyword {
+    -fx-fill: #F58CAD;
+}
+
+.code-comment {
+    -fx-fill: #A8979E;
+}
+
+.code-string {
+    -fx-fill: #E3C08F;
+}
+
+.code-number {
+    -fx-fill: #B8A6F5;
+}
+
+.cx-tile {
+    -fx-background-color: -bordeaux-tint;
+    -fx-background-radius: 12px;
+    -fx-padding: 12 16 12 16;
+}
+
+.cx-value {
+    -fx-text-fill: -bordeaux;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.cx-value.long {
+    -fx-font-size: 15px;
+}
+
+.dot {
+    -fx-min-width: 10px;
+    -fx-min-height: 10px;
+    -fx-max-width: 10px;
+    -fx-max-height: 10px;
+    -fx-background-color: -border;
+    -fx-background-radius: 999px;
+}
+
+.dot.on {
+    -fx-min-width: 28px;
+    -fx-max-width: 28px;
+    -fx-background-color: -bordeaux;
+}
+
+.footer-bar {
+    -fx-padding: 16 40 24 40;
+}
+
+/* ---------- Quiz ---------- */
+
+.option {
+    -fx-background-color: -card;
+    -fx-background-radius: 12px;
+    -fx-border-color: -border;
+    -fx-border-radius: 12px;
+    -fx-border-width: 1.5;
+    -fx-padding: 14 20 14 20;
+    -fx-cursor: hand;
+}
+
+.option:hover {
+    -fx-border-color: -bordeaux-soft;
+}
+
+.option-text {
+    -fx-font-size: 16px;
+}
+
+.option-letter {
+    -fx-min-width: 34px;
+    -fx-min-height: 34px;
+    -fx-max-width: 34px;
+    -fx-max-height: 34px;
+    -fx-background-color: -raised;
+    -fx-background-radius: 9px;
+    -fx-alignment: center;
+    -fx-text-fill: -subtle;
+    -fx-font-weight: bold;
+}
+
+.option.selected {
+    -fx-background-color: -bordeaux-tint;
+    -fx-border-color: -bordeaux;
+    -fx-border-width: 2;
+}
+
+.option.selected .option-letter {
+    -fx-background-color: -bordeaux;
+    -fx-text-fill: white;
+}
+
+.option.correct {
+    -fx-background-color: -correct-tint;
+    -fx-border-color: -correct;
+    -fx-border-width: 2;
+}
+
+.option.correct .option-letter {
+    -fx-background-color: -correct;
+    -fx-text-fill: white;
+}
+
+.option.wrong {
+    -fx-background-color: -wrong-tint;
+    -fx-border-color: -wrong;
+    -fx-border-width: 2;
+}
+
+.option.wrong .option-letter {
+    -fx-background-color: -wrong;
+    -fx-text-fill: white;
+}
+
+.option.locked {
+    -fx-cursor: default;
+}
+
+.option-tag {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.feedback {
+    -fx-background-radius: 12px;
+    -fx-padding: 16 18 16 18;
+}
+
+.feedback.correct {
+    -fx-background-color: -correct-tint;
+}
+
+.feedback.wrong {
+    -fx-background-color: -wrong-tint;
+}
+
+.feedback-icon {
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-height: 30px;
+    -fx-background-radius: 999px;
+    -fx-alignment: center;
+    -fx-text-fill: white;
+    -fx-font-weight: 800;
+}
+
+.feedback.correct .feedback-icon {
+    -fx-background-color: -correct;
+}
+
+.feedback.wrong .feedback-icon {
+    -fx-background-color: -wrong;
+}
+
+.hint {
+    -fx-text-fill: -disabled;
+    -fx-font-size: 12px;
+}
+
+/* ---------- Results ---------- */
+
+.big-score {
+    -fx-font-size: 52px;
+    -fx-font-weight: 800;
+}
+
+.unlock-box {
+    -fx-background-radius: 12px;
+    -fx-padding: 14 18 14 18;
+}
+
+.unlock-box.level-easy {
+    -fx-background-color: -easy-tint;
+}
+
+.unlock-box.level-intermediate {
+    -fx-background-color: -intermediate-tint;
+}
+
+.unlock-box.level-hard {
+    -fx-background-color: -hard-tint;
+}
+
+.unlock-box.retry {
+    -fx-background-color: -raised;
+}
+
+.answer-row {
+    -fx-padding: 12 0 12 0;
+    -fx-border-color: transparent transparent -border transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.answer-icon {
+    -fx-min-width: 26px;
+    -fx-min-height: 26px;
+    -fx-max-width: 26px;
+    -fx-max-height: 26px;
+    -fx-background-radius: 999px;
+    -fx-alignment: center;
+}
+
+.answer-icon.correct {
+    -fx-background-color: -correct;
+}
+
+.answer-icon.wrong {
+    -fx-background-color: -wrong;
+}
+
+.answer-icon .icon {
+    -fx-fill: white;
+}
+
+/* ---------- Visualizers ---------- */
+
+.legend-swatch {
+    -fx-min-width: 10px;
+    -fx-min-height: 10px;
+    -fx-max-width: 10px;
+    -fx-max-height: 10px;
+    -fx-background-radius: 3px;
+}
+
+.caption-verb {
+    -fx-fill: -bordeaux;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.caption-text {
+    -fx-fill: -text;
+    -fx-font-size: 16px;
+}
+
+.side-title {
+    -fx-text-fill: -muted;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.vertex-chip {
+    -fx-background-color: -raised;
+    -fx-background-radius: 8px;
+    -fx-padding: 4 10 4 10;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.vertex-chip.frontier {
+    -fx-background-color: -intermediate-tint;
+    -fx-text-fill: -intermediate;
+}
+
+.vertex-chip.visited {
+    -fx-background-color: -correct-tint;
+    -fx-text-fill: -correct;
+}
+
+/* Speed buttons */
+.speed-group {
+    -fx-background-color: -raised;
+    -fx-background-radius: 10px;
+    -fx-padding: 3;
+}
+
+.speed-option {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8px;
+    -fx-text-fill: -muted;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 6 12 6 12;
+    -fx-cursor: hand;
+}
+
+.speed-option:hover {
+    -fx-text-fill: -text;
+}
+
+.speed-option:selected {
+    -fx-background-color: -bordeaux;
+    -fx-text-fill: white;
+}
+
+/* Algorithm picker */
+.combo-box {
+    -fx-background-color: -bordeaux-tint;
+    -fx-background-radius: 999px;
+    -fx-border-width: 0;
+    -fx-padding: 2 6 2 10;
+    -fx-cursor: hand;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: -accent-text;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-color: transparent;
+}
+
+.combo-box .arrow {
+    -fx-background-color: -accent-text;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: -card;
+    -fx-border-color: -border;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: -card;
+    -fx-text-fill: -text;
+    -fx-padding: 8 14 8 14;
+}
+
+.combo-box-popup .list-view .list-cell:hover,
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: -bordeaux-tint;
+    -fx-text-fill: -accent-text;
+}
+
+/* ---------- Menus and dialogs ---------- */
+
+.context-menu {
+    -fx-background-color: -card;
+    -fx-border-color: -border;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-padding: 6;
+}
+
+.context-menu .menu-item .label {
+    -fx-text-fill: -text;
+}
+
+.context-menu .menu-item:focused {
+    -fx-background-color: -bordeaux-tint;
+    -fx-background-radius: 6px;
+}
+
+.dialog-pane {
+    -fx-background-color: -card;
+    -fx-padding: 8;
+}
+
+.dialog-pane > .header-panel {
+    -fx-background-color: -card;
+    -fx-padding: 16 20 4 20;
+}
+
+.dialog-pane > .header-panel .label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.dialog-pane > .content.label {
+    -fx-text-fill: -subtle;
+    -fx-padding: 8 20 16 20;
+}
+
+.dialog-pane .button {
+    -fx-background-color: -bordeaux-tint;
+    -fx-text-fill: -accent-text;
+    -fx-background-radius: 10px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 18 8 18;
+    -fx-cursor: hand;
+}
+
+.dialog-pane .button:default {
+    -fx-background-color: -bordeaux;
+    -fx-text-fill: white;
+}
+
+.dialog-pane > .header-panel > .graphic-container,
+.dialog-pane .graphic-container {
+    -fx-padding: 0;
+}
+
+.tooltip {
+    -fx-background-color: -raised;
+    -fx-text-fill: -text;
+    -fx-background-radius: 8px;
+    -fx-font-size: 12px;
+}
